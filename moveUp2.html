@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>图片展示显示详细说明和隐藏</title>
+<meta charset='utf-8'/>
+<style type="text/css">
+body, ul, li, ol {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	font-family: 微软雅黑;
+}
+img {
+	border: 0px;
+}
+.picList {
+	width: 950px;
+	float: left;
+}
+.picList .col {
+	width: 300px;
+	height: 200px;
+	position: relative;/*设置相对定位*/
+	overflow: hidden;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.picList .col img, .col a {
+	position: absolute;/*设置绝对定位*/
+	top: 0px;
+	left: 0px;
+}
+.picList .col img {
+	width: 100%;
+}
+.picList .col a {
+	display: block;/*将a设置为块状元素*/
+	width: 280px;
+	height: 180px;
+	top: 160px;/*设置初始值*/
+	background:#000;
+	color: white;
+	font-style: normal;
+	line-height: 25px;
+	padding: 10px;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<ul class='picList' id="picList">
+<li class='col' id="pic1" > 
+   <img src="1.jpg" />
+   <a href='#'>图片展示上移效果<br/>
+ 图片展示上移效果
+   </a> 
+</li>
+<li class='col' id="pic2"> 
+   <img src="2.jpg" />
+   <a href='#'>图片展示上移效果<br/>
+图片展示上移效果
+   </a> 
+</li>
+<li class='col' id="pic3"> 
+   <img src="3.jpg" />
+   <a href='#'>图片展示上移效果<br/>
+图片展示上移效果
+   </a> 
+</li>
+</ul>
+<script>
+function showDetail()
+{
+	var Div=document.getElementById('picList').getElementsByTagName('li');
+	for(var i=0;i<Div.length;i++)
+	{
+		Div[i].onmouseover=function()
+		{
+			this.getElementsByTagName('a')[0].style.top=0;;
+		}
+		Div[i].onmouseout=function()
+		{
+			this.getElementsByTagName('a')[0].style.top=160+'px';
+		}
+	}
+}
+showDetail();
+</script>
+</body>
+</html>
+
