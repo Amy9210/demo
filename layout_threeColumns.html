@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		margin:0;
+		padding:0;
+	}
+	.left{
+		width:100px;
+		height:500px;
+		background:#99ffff ;
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.right{
+		width:300px;
+		height:500px;
+		background:#99ffff ;
+		position:absolute;
+		right:0;
+		top:0;
+	}
+	.middle{
+		height:500px;
+		background:#99ccff ;
+		position:absolute;
+		left:110px;
+		right:310px;
+		top:0;
+	}
+</style>
+<body>
+	
+</body>
+<div class="left">左右固定宽度，中间自适应</div>
+<div class="middle">缩小到窗口宽度小于left.width+left.margin+right.width+right.margin时，middle会被挤到下方；缩小到窗口宽度小于right.width时，左侧column会被右侧column覆盖</div>
+<div class="right">左右固定宽度，中间自适应</div>
+</html>
