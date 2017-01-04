@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	*{margin:0;
+		padding:0;
+		color:#ffffff;}
+	.nav{
+		height:50px;
+		width:600px;
+		margin:0 auto;
+		background: #ccccff;
+	}
+	.nav_ul{
+		list-style:none;
+	}
+	.nav_ul li{
+		float:left;
+		line-height: 50px;
+		text-align:center;/*使字体垂直、左右居中*/
+		
+	}
+	.nav_ul li a{
+		text-decoration: none;
+		display: block;/*为了设置hover属性时可以显示整个li都被选中的状态*/	
+		padding:0 20px;
+	}
+	.nav_ul li a:hover{
+		background: #99ccff;
+	}
+	.nav_ul_ul {
+		position:absolute;
+		display:none;
+		/*由于父级已设置list-style为none，所以此处不用设置*/
+	}
+	.nav_ul_ul li{
+		float:none;/*若不清除，会受父级float属性的影响*/
+		margin-top: 1px;
+		background:#ffccff;
+	}
+	.nav_ul li:hover ul{
+		display: block;
+	}
+</style>
+</head>
+
+<body>
+<div class="nav">
+  <ul class="nav_ul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">师资队伍</a>
+      <ul class="nav_ul_ul">
+      	<li><a href="#">师资列表师资列表师资列</a></li>
+      	<li><a href="#">名师风采</a></li>
+      </ul>
+    </li>
+    <li><a href="#">科学研究</a>
+    <ul class="nav_ul_ul">
+      	<li><a href="#">师资列表师资列表师资列</a></li>
+      	<li><a href="#">名师风采</a></li>
+      </ul></li>
+    <li><a href="#">招生就业</a></li>
+    <li><a href="#">学生工作</a></li>
+  </ul>
+  </div>
+</body>
+
+</html>
